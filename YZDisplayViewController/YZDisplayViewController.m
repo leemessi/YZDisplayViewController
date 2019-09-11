@@ -184,9 +184,14 @@ static NSString * const ID = @"CONTENTCELL";
 - (void)initial
 {
     // 初始化标题高度
-    _titleHeight = YZTitleScrollViewH;
+    _titleHeight = kTopHeight;
     
-    self.automaticallyAdjustsScrollViewInsets = NO;
+    self.extendedLayoutIncludesOpaqueBars = YES;
+    if (@available(iOS 11.0, *)) {
+        self.contentScrollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+    } else {
+        self.automaticallyAdjustsScrollViewInsets = NO;
+    }
 }
 
 #pragma mark - 懒加载

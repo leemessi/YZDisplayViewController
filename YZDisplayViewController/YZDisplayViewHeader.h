@@ -33,6 +33,12 @@
 
 #import "YZDisplayViewController.h"
 
+
+#define kStatusBarHeight [[UIApplication sharedApplication] statusBarFrame].size.height
+#define kNavBarHeight 44.0
+#define kTabBarHeight ([[UIApplication sharedApplication] statusBarFrame].size.height>20?83:49)
+#define kTopHeight (kStatusBarHeight + kNavBarHeight)
+
 // 导航条高度
 static CGFloat const YZNavBarH = 64;
 
