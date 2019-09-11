@@ -184,7 +184,7 @@ static NSString * const ID = @"CONTENTCELL";
 - (void)initial
 {
     // 初始化标题高度
-    _titleHeight = kTopHeight;
+    _titleHeight = YZTitleScrollViewH;
     
     self.extendedLayoutIncludesOpaqueBars = YES;
     if (@available(iOS 11.0, *)) {
@@ -485,7 +485,7 @@ static NSString * const ID = @"CONTENTCELL";
         
         CGFloat statusH = [UIApplication sharedApplication].statusBarFrame.size.height;
         
-        CGFloat titleY = self.navigationController.navigationBarHidden == NO ?YZNavBarH:statusH;
+        CGFloat titleY = self.navigationController.navigationBarHidden == NO ?YZNavBarH+statusH:statusH;
         
         
         
