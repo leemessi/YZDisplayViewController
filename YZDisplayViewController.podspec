@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
 
 
   s.name         = "YZDisplayViewController"
-  s.version      = "1.0.6"
+  s.version      = "1.0.7"
   s.summary      = "Title Bar Gradient with the User to drag for ios."
   s.homepage     = "https://github.com/iThinkerYZ"
   s.license      = "MIT"
